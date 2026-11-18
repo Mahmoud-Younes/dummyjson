@@ -1,8 +1,20 @@
-# DummyJSON Store
+<h1 align="center">🛍️ DummyJSON Store</h1>
 
-A Flutter e-commerce demo app (Android + Web) built as part of the **DEPI** training program. It talks to the free [DummyJSON](https://dummyjson.com) fake REST API and covers the full shopping journey: log in → browse products → search → view details → log out.
+<p align="center">
+  A Flutter e-commerce demo app (Android + Web) built as part of the <b>DEPI</b> training program.<br/>
+  It talks to the free <a href="https://dummyjson.com">DummyJSON</a> fake REST API and covers the full shopping journey:<br/>
+  <b>log in → browse products → search → view details → log out</b>.
+</p>
 
-> **In one sentence:** a small, cleanly-architected shopping app that shows how a real Flutter app handles authentication (with token refresh), product listing, and state management — built for learning, written for readers.
+<p align="center">
+  <a href="https://flutter.dev"><img src="https://img.shields.io/badge/Flutter-3.x-02569B?logo=flutter&logoColor=white" alt="Flutter"/></a>
+  <a href="https://dart.dev"><img src="https://img.shields.io/badge/Dart-3.x-0175C2?logo=dart&logoColor=white" alt="Dart"/></a>
+  <img src="https://img.shields.io/badge/Platform-Android%20%7C%20Web-2E7D32" alt="Platform"/>
+  <img src="https://img.shields.io/badge/State-Cubit-02569B" alt="Cubit"/>
+  <img src="https://img.shields.io/badge/Tests-77%20passing-4CAF50" alt="Tests"/>
+</p>
+
+> **In one sentence:** a small, cleanly-architected shopping app that shows how a real Flutter app handles authentication (with automatic token refresh), product listing, and state management — built for learning, written for readers.
 
 ## What the app does
 
@@ -19,23 +31,32 @@ A Flutter e-commerce demo app (Android + Web) built as part of the **DEPI** trai
 
 ## Screenshots
 
+Real captures from the Android emulator — every screen of the journey:
+
+<p align="center"><b>Splash · Login · Sign up</b></p>
+
 | Splash | Login | Sign up |
-|---|---|---|
-| ![Splash](screenshots/01-splash.png) | ![Login](screenshots/02-login.png) | ![Sign up](screenshots/03-signup.png) |
+|:---:|:---:|:---:|
+| <img src="screenshots/01-splash.png" width="220"/> | <img src="screenshots/02-login.png" width="220"/> | <img src="screenshots/03-signup.png" width="220"/> |
+
+<p align="center"><b>Shopping · Logout</b></p>
 
 | Products | Search | Details | Settings popup |
-|---|---|---|---|
-| ![Products](screenshots/04-products.png) | ![Search](screenshots/05-search.png) | ![Details](screenshots/06-product-details.png) | ![Settings popup](screenshots/07-settings-popup.png) |
+|:---:|:---:|:---:|:---:|
+| <img src="screenshots/04-products.png" width="220"/> | <img src="screenshots/05-search.png" width="220"/> | <img src="screenshots/06-product-details.png" width="220"/> | <img src="screenshots/07-settings-popup.png" width="220"/> |
 
 ## Try it yourself
 
 1. Install [Flutter](https://docs.flutter.dev/get-started/install), then:
    ```bash
    flutter pub get
-   flutter run          # on a connected Android device/emulator
-   flutter run -d chrome   # or on the web
+   flutter run                # on a connected Android device/emulator
+   flutter run -d chrome      # or on the web
    ```
-2. Log in with the fake-API demo account: **emilys** / **emilyspass** — or any account from the DummyJSON docs. (Sign-up creates a simulated account; the demo login above is the real one.)
+2. Log in with the fake-API demo account:
+
+> [!NOTE]
+> **Demo account:** username **`emilys`** — password **`emilyspass`** (any account from the DummyJSON docs works). Sign-up creates a *simulated* account — the form, validation, and checklist are real, the backend is not.
 
 ## How it is built
 
