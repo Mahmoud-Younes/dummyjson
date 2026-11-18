@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05",
+  "title": "Design System: DummyJSON Store",
+  "extensions": {
+    "colorMeta": {
+      "confident-teal": { "role": "primary", "displayName": "Confident Teal", "canonical": "#00796B", "tonalRamp": ["#00332E", "#004A42", "#00615A", "#00796B", "#26968A", "#52B3A8", "#85D1C6", "#BEEFE8"] },
+      "honest-green": { "role": "secondary", "displayName": "Honest Green", "canonical": "#2E7D32", "tonalRamp": ["#0E2B10", "#17451A", "#226224", "#2E7D32", "#4E9A52", "#74B877", "#9DD6A0", "#C9EFCB"] },
+      "alert-red": { "role": "secondary", "displayName": "Alert Red", "canonical": "#D32F2F", "tonalRamp": ["#4A0F0F", "#6E1717", "#A02323", "#D32F2F", "#DE5252", "#E87A7A", "#F2A9A9", "#FBD8D8"] },
+      "banner-red-deep": { "role": "secondary", "displayName": "Banner Red Deep", "canonical": "#B71C1C", "tonalRamp": ["#3D0A0A", "#571111", "#871616", "#B71C1C", "#C94A4A", "#DC7B7B", "#EDB3B3", "#F9E0E0"] },
+      "banner-red-wash": { "role": "secondary", "displayName": "Banner Red Wash", "canonical": "#FFEBEE" },
+      "star-amber": { "role": "secondary", "displayName": "Star Amber", "canonical": "#FFC107", "tonalRamp": ["#4A3400", "#6E4D00", "#A57100", "#C98A00", "#FFC107", "#FFD54F", "#FFE082", "#FFF3CD"] },
+      "text-grey": { "role": "neutral", "displayName": "Text Grey", "canonical": "#616161", "tonalRamp": ["#1A1A1A", "#333333", "#4A4A4A", "#616161", "#8A8A8A", "#B0B0B0", "#D4D4D4", "#F2F2F2"] },
+      "line-grey": { "role": "neutral", "displayName": "Line Grey", "canonical": "#9E9E9E" },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#FFFFFF" },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#000000" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Splash title only — the biggest white text in the app." },
+      "headline": { "displayName": "Headline", "purpose": "Screen headings (Welcome back); the details title is its 22px/700 sibling." },
+      "title": { "displayName": "Title", "purpose": "Card titles, app-bar title (white variant), section headings (700 variant)." },
+      "body": { "displayName": "Body", "purpose": "Reading text, outlined-button labels, ratings." },
+      "label": { "displayName": "Label", "purpose": "Primary button labels (14px/600 white); hints use 12-14px regular Text Grey." }
+    },
+    "shadows": [
+      { "name": "elevation-1", "value": "0 1px 3px rgba(0,0,0,0.30), 0 4px 8px 3px rgba(0,0,0,0.15)", "purpose": "Material 3 card elevation 1 — product cards." }
+    ],
+    "motion": [
+      { "name": "m3-standard", "value": "cubic-bezier(0.2, 0, 0, 1)", "purpose": "Material 3 emphasized easing — Flutter's own transitions own the motion grammar." }
+    ],
+    "breakpoints": [
+      { "name": "form-max", "value": "400px", "purpose": "Login form max width so wide screens keep the counter tidy." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Teal stadium CTA - Login. 48px tall, full-width, white 14px/600 label.",
+      "html": "<button class=\"ds-btn-primary\">Login</button>",
+      "css": ".ds-btn-primary{background:#00796B;color:#FFFFFF;font-family:Roboto,system-ui,sans-serif;font-size:14px;font-weight:600;height:48px;padding:0 24px;border:none;border-radius:999px;cursor:pointer;transition:background .2s cubic-bezier(.2,0,0,1)}.ds-btn-primary:hover{background:#00695C}.ds-btn-primary:focus-visible{outline:2px solid #004D40;outline-offset:2px}.ds-btn-primary:disabled{background:#B2DFDB;color:#616161}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined teal-label action - Clear search. Logout lives in the app-bar settings popup menu (teal item); while logging out the gear icon in the app bar swaps to an 18px spinner.",
+      "html": "<button class=\"ds-btn-secondary\">Clear search</button>",
+      "css": ".ds-btn-secondary{background:transparent;color:#00796B;font-family:Roboto,system-ui,sans-serif;font-size:16px;font-weight:400;height:40px;padding:0 16px;border:1px solid #79747E;border-radius:999px;cursor:pointer}.ds-btn-secondary:hover{background:rgba(0,121,107,.08)}.ds-btn-secondary:focus-visible{outline:2px solid #00796B;outline-offset:2px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "text-field",
+      "description": "The one field everywhere - filled white, 1px grey border, teal on focus.",
+      "html": "<input class=\"ds-input\" placeholder=\"Enter your user name\">",
+      "css": ".ds-input{background:#FFFFFF;color:#000000;font-family:Roboto,system-ui,sans-serif;font-size:16px;padding:14px 16px;border:1px solid #9E9E9E;border-radius:8px;outline:none;width:100%;box-sizing:border-box}.ds-input::placeholder{color:#616161}.ds-input:hover{border-color:#616161}.ds-input:focus{border-color:#00796B}"
+    },
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "ListTile card - 56px rounded thumb, name, the honest price sentence, amber rating.",
+      "html": "<div class=\"ds-card-product\"><div class=\"ds-thumb\"></div><div class=\"ds-card-body\"><div class=\"ds-card-title\">Wireless Headphones</div><div class=\"ds-card-sub\"><span class=\"ds-price-now\">$84.99</span> <span class=\"ds-price-old\">$99.99</span> &middot; electronics</div></div><div class=\"ds-rating\"><span class=\"ds-star\">&#9733;</span> 4.7</div></div>",
+      "css": ".ds-card-product{display:flex;align-items:center;gap:12px;background:#FFFFFF;border-radius:12px;padding:12px 16px;box-shadow:0 1px 3px rgba(0,0,0,.30),0 4px 8px 3px rgba(0,0,0,.15);font-family:Roboto,system-ui,sans-serif;color:#000000}.ds-thumb{width:56px;height:56px;border-radius:8px;background:#E0F2F1;flex:none}.ds-card-body{flex:1;min-width:0}.ds-card-title{font-size:16px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ds-card-sub{font-size:14px;color:#616161}.ds-price-now{color:#2E7D32;font-weight:700}.ds-price-old{text-decoration:line-through}.ds-rating{display:flex;align-items:center;gap:4px;font-size:14px}.ds-star{color:#FFC107;font-size:18px}"
+    },
+    {
+      "name": "Error Banner",
+      "kind": "custom",
+      "refersTo": "banner-error",
+      "description": "Login failure banner - red wash, deep red text, icon, 8dp radius.",
+      "html": "<div class=\"ds-banner-error\"><svg class=\"ds-banner-icon\" viewBox=\"0 0 24 24\" width=\"22\" height=\"22\"><circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"none\" stroke=\"#D32F2F\" stroke-width=\"2\"/><line x1=\"12\" y1=\"7\" x2=\"12\" y2=\"13\" stroke=\"#D32F2F\" stroke-width=\"2\"/><circle cx=\"12\" cy=\"16.5\" r=\"1.4\" fill=\"#D32F2F\"/></svg><span>Incorrect username or password</span></div>",
+      "css": ".ds-banner-error{display:flex;align-items:center;gap:8px;background:#FFEBEE;color:#B71C1C;font-family:Roboto,system-ui,sans-serif;font-size:14px;padding:12px;border-radius:8px}"
+    },
+    {
+      "name": "App Bar",
+      "kind": "nav",
+      "refersTo": "app-bar",
+      "description": "Confident Teal bar with a single white 18px/600 title; the Products app bar (post-login root) hosts the settings gear with a popup menu (username + Logout).",
+      "html": "<div class=\"ds-app-bar\"><span class=\"ds-app-bar-title\">Products</span></div>",
+      "css": ".ds-app-bar{display:flex;align-items:center;background:#00796B;height:56px;padding:0 16px;font-family:Roboto,system-ui,sans-serif}.ds-app-bar-title{color:#FFFFFF;font-size:18px;font-weight:600}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Tidy Counter",
+    "overview": "DummyJSON Store looks like a small neighborhood shop where everything has its place. One confident teal owns the room - the app bar, the splash, the primary buttons, the focus of every field. Everything else is white paper, black ink and one grey voice, so a visitor can scan any screen in seconds and an evaluator can see the discipline instantly.\n\nThe system is deliberately plain: stock Material 3 components, no custom chrome, no gradients, no second accent. The craft lives in precision instead - a 48dp primary button, one 8dp radius shared by every custom surface, text colors verified against WCAG AA, and a price language that never lies. Expression is spent only inside Material's own theming slots.\n\nIt is a teaching system as much as a store: every text style is named by formula, every gap comes from a spacing helper, and every screen is assembled from the same small set of components. New screens stay on-brand by reusing the counter, not by improvising.",
+    "keyCharacteristics": [
+      "One brand color - Confident Teal (#00796B) - against white paper and black ink",
+      "Functional color only: Honest Green reports price/stock, Alert Red reports absence, Star Amber marks ratings",
+      "Plain Material 3 components at exact sizes (48dp primary button, 8dp custom radius, 1px field borders)",
+      "Honest price language: bold green now-price + struck grey old-price, only when a discount truly exists",
+      "Flat depth: tonal M3 surfaces and default card elevation (1), never custom shadows",
+      "Roboto everywhere, sized 12-26px by formula, weights 400/600/700 in practice"
+    ],
+    "rules": [
+      { "name": "The One Voice Rule", "body": "Confident Teal is the only brand color; green, red and amber never decorate - they report price, stock and rating.", "section": "colors" },
+      { "name": "The Honest Price Rule", "body": "What you pay is bold Honest Green; what it was is struck Text Grey - and the struck price appears only when a real discount exists.", "section": "colors" },
+      { "name": "The Formula Rule", "body": "Every text style lives in one file (styles.dart) and is named font<size><weight><color> - screens pick a style, never a raw TextStyle.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are flat tonal M3 surfaces at rest; elevation appears only as Flutter's default card shadow (1), never as a custom BoxShadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do add every text style to styles.dart with the formula name (font14BoldGreen); pick a style, never a raw TextStyle.",
+      "Do keep readable text at >= 4.5:1 contrast - #616161 for grey text, never #9E9E9E.",
+      "Do use the spacing helpers at the six documented steps (4/8/12/16/24/32).",
+      "Do keep the price language identical in card and details (bold green now-price, struck grey old-price, only when discounted).",
+      "Do size primary actions at 48px height and custom surfaces at 8dp radius."
+    ],
+    "donts": [
+      "Don't introduce a second brand color, a gradient, or a custom shadow - teal is the one voice; depth belongs to Material.",
+      "Don't port iOS controls or build custom chrome; Material 3 owns structure, navigation and motion.",
+      "Don't strike through the old price or show a discount chip when there is no discount.",
+      "Don't use raw Colors.red / Colors.green / Colors.grey for readable text (they fail WCAG AA) - use the documented values.",
+      "Don't hand-roll spacing with magic SizedBox numbers outside the helper steps."
+    ]
+  }
+}
